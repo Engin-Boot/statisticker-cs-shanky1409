@@ -6,8 +6,13 @@ namespace Statistics
 {
     public class StatsComputer
     {
+        private Stats stats;
+        public StatsComputer()
+        {
+            this.stats = new Stats();
+        }
         public Stats CalculateStatistics(List<double> numbers) {
-            Stats stats = new Stats();
+            
             if(numbers.Count==0)
             {
                 stats.min = double.NaN;
